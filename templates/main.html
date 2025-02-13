@@ -4,24 +4,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 <style>
-
-
+    body{
+        background-color:hsl(350,75%,65%);
+        color:white;
+        font-family:Arial;
+    }
     .vid{
-        max-width:80%;
-        padding:1em;
+        width:100%;
         margin:0 auto;
         loading:lazy;
     }
     .container{
         margin:0 auto;
-        background-color:black;
-        color:white;
+        padding-inline: 2em;
+
     }
     .grid{
         display:grid;
-        grid-gap:2em;
-        grid-template-columns:repeat(auto-fit, minmax(600px, 1fr));   
+        grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));   
+        grid-gap: 2em;
+       
      }
+
 </style>
 </head>
 <body>
