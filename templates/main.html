@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+
+    .vid{
+        max-width:80%;
+        padding:1em;
+        margin:0 auto;
+        loading:lazy;
+    }
+    .container{
+        margin:0 auto;
+        background-color:black;
+        color:white;
+    }
+    .grid{
+        display:grid;
+        grid-gap:2em;
+        grid-template-columns:repeat(auto-fit, minmax(600px, 1fr));   
+     }
+</style>
+</head>
+<body>
+    
+<div class="container grid">
+<h1>Local Videos<h1>
+
+
+{% for video in videos %}
+<video class="vid" controls>
+    <source src="stream-video/{{ video }}" type="video/mp4" title = {{video}} >
+    Your browser does not support the video tag.
+</video>
+{% endfor %}
+</div>
+
+</body>
+</html>
